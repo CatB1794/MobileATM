@@ -1,18 +1,19 @@
-import React from 'react';
+import React from "react";
 import { StyleSheet, Text, Image, View, Button, Alert } from "react-native";
 import { StatusBar } from "expo-status-bar";
 /*import * as MediaLibrary from 'expo-media-library';
 import * as FileSystem from 'expo-file-system';
 import * as Permissions from 'expo-permissions';
 import { useKeyboard } from '@react-native-community/hooks'*/
+import { Entypo } from "@expo/vector-icons";
+
+import styles from "../components/styles";
 
 function CWScreen(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <div></div>;
 }
+
+//<AppButton title="Test" />
 
 /*saveFile = async () => {
   const { status } = await Permissions.askAsync(Permissions.MEDIA_LIBRARY);
@@ -23,37 +24,5 @@ function CWScreen(props) {
       await MediaLibrary.createAlbumAsync("Download", asset, false)
   }
 }*/
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      flexDirection: "column",
-      backgroundColor: "#FFFAFAn",
-      alignItems: "center",
-      alignContent: "center",
-      justifyContent: "space-around",
-      flexWrap: "wrap",
-    },
-    topBanner: {
-      flex: 1,
-      color: "#4169E1",
-    },
-    midBanner: {
-      flex: 2,
-      color: "#FFFAFAn",
-    },
-    btmBanner: {
-      flex: 1,
-      color: "#4169E1",
-    },
-    textMain: {
-      color: "#4169E1",
-      fontSize: 20,
-    },
-    textBanner: {
-      color: "#FFFAFAn",
-      fontSize: 25,
-    },
-  });
 
 export default CWScreen;

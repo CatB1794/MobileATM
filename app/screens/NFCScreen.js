@@ -1,8 +1,9 @@
 import React from "react";
-import { StyleSheet, Text, Image, View, Button, Alert } from "react-native";
+import { Text, Image, View, Button, Alert } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-import Colours from "../config/Colours";
+import styles from "../components/styles";
+import AppButton from "../components/AppButton";
 
 function NFCScreen(props) {
   const handleTap = () => console.log("Card tapped");
@@ -10,8 +11,8 @@ function NFCScreen(props) {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.banners}>
-        <Text style={styles.textBanner}>
-          Welcome to the Automatic Teller Mobile
+        <Text style={styles.topBanner}>
+          Welcome to the{"\n"}Automatic Teller Mobile
         </Text>
       </View>
       <View style={styles.container}>
@@ -23,7 +24,11 @@ function NFCScreen(props) {
           source={require("../assets/CC_Symbol.png")}
         />
       </View>
-      <View style={styles.banners} />
+      <View style={styles.banners}>
+        <Text style={styles.btmBanner}>
+          Thank you for choosing to use a virtual ATM
+        </Text>
+      </View>
     </View>
   );
 }
@@ -61,30 +66,5 @@ function readNdef() {
     NfcManager.registerTagEvent();
   });
 }*/
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: "column",
-    backgroundColor: Colours.primary,
-    alignItems: "center",
-    alignContent: "center",
-    justifyContent: "space-around",
-    flexWrap: "wrap",
-  },
-  banners: {
-    backgroundColor: Colours.secondary,
-    justifyContent: "center",
-    height: 120,
-  },
-  textMain: {
-    color: Colours.secondary,
-    fontSize: 20,
-  },
-  textBanner: {
-    color: Colours.primary,
-    fontSize: 25,
-  },
-});
 
 export default NFCScreen;

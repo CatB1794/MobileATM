@@ -5,6 +5,8 @@ import { StatusBar } from "expo-status-bar";
 import * as FileSystem from 'expo-file-system';
 import * as Permissions from 'expo-permissions';*/
 
+import styles from "../components/styles";
+
 function BalanceInquiry(props) {
     return (
         <div>
@@ -22,37 +24,5 @@ function BalanceInquiry(props) {
       await MediaLibrary.createAlbumAsync("Download", asset, false)
   }
 }*/
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      flexDirection: "column",
-      backgroundColor: "#FFFAFAn",
-      alignItems: "center",
-      alignContent: "center",
-      justifyContent: "space-around",
-      flexWrap: "wrap",
-    },
-    topBanner: {
-      flex: 1,
-      color: "#4169E1",
-    },
-    midBanner: {
-      flex: 2,
-      color: "#FFFAFAn",
-    },
-    btmBanner: {
-      flex: 1,
-      color: "#4169E1",
-    },
-    textMain: {
-      color: "#4169E1",
-      fontSize: 20,
-    },
-    textBanner: {
-      color: "#FFFAFAn",
-      fontSize: 25,
-    },
-  });
 
 export default BalanceInquiry;
