@@ -1,5 +1,5 @@
 # VirtualATM
-Automatic-Teller Mobile
+Automatic Teller Mobile
 
 Basic implementation of a virtual ATM.<br />
 
