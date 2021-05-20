@@ -1,7 +1,7 @@
 import React from "react";
 
-import FingerprintScreen from "./app/screens/FingerprintScreen";
+import NFCScreen from "./app/screens/NFCScreen";
 
 export default function App() {
-  return <FingerprintScreen />;
+  return <NFCScreen />;
 }

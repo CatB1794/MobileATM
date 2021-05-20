@@ -7,13 +7,12 @@ import MainMenu from "./MainMenu";
 import styles from "../components/styles";
 
 function FingerprintScreen(props) {
-  const handleTap = () => console.log("Fingerprint tapped");
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.btmBanner} />
       <View style={styles.container}>
-        <Text style={styles.textMain} onPress={handleTap}>
+        <Text style={styles.textMain} onPress={props.onPress}>
           Scan your fingerprint
         </Text>
         <Image

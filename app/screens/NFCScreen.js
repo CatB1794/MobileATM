@@ -5,12 +5,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from "expo-status-bar";
 
 import styles from "../components/styles";
-import AppButton from "../components/AppButton";
+import Screens from "../components/Screens";
 
 function NFCScreen(props) {
-  const handleTap = () => console.log("Card tapped");
   return (
-    <View style={styles.container}>
+    <Screens>
       <StatusBar style="auto" />
       <View style={styles.topBanner}>
         <Text style={styles.topBanTxt}>
@@ -18,7 +17,7 @@ function NFCScreen(props) {
         </Text>
       </View>
       <View style={styles.container}>
-        <Text style={styles.textMain} onPress={handleTap}>
+        <Text style={styles.textMain} onPress={props.onPress}>
           Tap your NFC card here
         </Text>
         <Image
@@ -31,7 +30,7 @@ function NFCScreen(props) {
           Thank you for choosing to use a virtual ATM
         </Text>
       </View>
-    </View>
+    </Screens>
   );
 }
 
