@@ -1,20 +1,49 @@
-import React from 'react';
-import { StyleSheet, Text, Image, View, Button, Alert } from "react-native";
+import React from "react";
+import { Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-import CWScreen from "./CWScreen";
-import CDScreen from "./CDScreen";
-import ChqDepScreen from "./ChqDepScreen";
-import BalanceInquiry from "./BalanceInquiry";
-
 import styles from "../components/styles";
+import AppButton from "../components/AppButton";
+import ExitBtn from "../components/ExitBtn";
 
 function MainMenu(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+  return (
+    <View style={styles.container}>
+      <StatusBar style="auto" />
+      <View style={styles.topBanner}>
+        <Text style={styles.topBanTxt}>Please select a transaction</Text>
+      </View>
+      <View style={styles.container}>
+        <AppButton
+          style={styles.textMain}
+          onPress={props.onPress}
+          title="Cash Withdrawal"
+        />
+        <AppButton
+          style={styles.textMain}
+          onPress={props.onPress}
+          title="Cash Deposit"
+        />
+        <AppButton
+          style={styles.textMain}
+          onPress={props.onPress}
+          title="Cheque Deposit"
+        />
+        <AppButton
+          style={styles.textMain}
+          onPress={props.onPress}
+          title="Balance Inquiry"
+        />
+      </View>
+      <View style={styles.btmBanner}>
+        <ExitBtn
+          style={styles.btmBanTxt}
+          onPress={props.onPress}
+          title="Exit"
+        />
+      </View>
+    </View>
+  );
 }
 
 export default MainMenu;

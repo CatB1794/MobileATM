@@ -1,15 +1,12 @@
 import React from "react";
 import { Text, Image, View } from "react-native";
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from "expo-status-bar";
 
 import styles from "../components/styles";
-import Screens from "../components/Screens";
 
 function NFCScreen(props) {
   return (
-    <Screens>
+    <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.topBanner}>
         <Text style={styles.topBanTxt}>
@@ -30,7 +27,7 @@ function NFCScreen(props) {
           Thank you for choosing to use a virtual ATM
         </Text>
       </View>
-    </Screens>
+    </View>
   );
 }
 

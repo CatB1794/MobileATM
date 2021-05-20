@@ -1,20 +1,14 @@
-import React from 'react';
+import React from "react";
 import { StyleSheet, Text, Image, View, Button, Alert } from "react-native";
 import { StatusBar } from "expo-status-bar";
 /*import * as MediaLibrary from 'expo-media-library';
 import * as FileSystem from 'expo-file-system';
 import * as Permissions from 'expo-permissions';*/
 
-import ReceiptOption from "./ReceiptOption";
-
 import styles from "../components/styles";
 
 function BalanceInquiry(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <div></div>;
 }
 
 /*saveFile = async () => {
