@@ -1,5 +1,7 @@
 import React from "react";
-import { Text, Image, View, Button, Alert } from "react-native";
+import { Text, Image, View } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from "expo-status-bar";
 
 import styles from "../components/styles";
@@ -10,8 +12,8 @@ function NFCScreen(props) {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <View style={styles.banners}>
-        <Text style={styles.topBanner}>
+      <View style={styles.topBanner}>
+        <Text style={styles.topBanTxt}>
           Welcome to the{"\n"}Automatic Teller Mobile
         </Text>
       </View>
@@ -24,8 +26,8 @@ function NFCScreen(props) {
           source={require("../assets/CC_Symbol.png")}
         />
       </View>
-      <View style={styles.banners}>
-        <Text style={styles.btmBanner}>
+      <View style={styles.btmBanner}>
+        <Text style={styles.btmBanTxt}>
           Thank you for choosing to use a virtual ATM
         </Text>
       </View>

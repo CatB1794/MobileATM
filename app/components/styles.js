@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     alignContent: "center",
   },
-  banners: {
+  topBanner: {
     backgroundColor: Colours.royal,
     justifyContent: "center",
     alignItems: "center",
@@ -20,19 +20,27 @@ const styles = StyleSheet.create({
     height: 120,
     width: "100%",
   },
+  btmBanner: {
+    backgroundColor: Colours.royal,
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center",
+    height: 100,
+    width: "100%",
+  },
   textMain: {
     color: Colours.royal,
     textAlign: TextConf.txtAlign,
     fontSize: TextConf.txtFontBig,
-    padding: 15,
+    paddingVertical: 15,
   },
-  topBanner: {
+  topBanTxt: {
     color: Colours.snow,
     textAlign: TextConf.txtAlign,
     fontSize: TextConf.txtFont,
     fontWeight: TextConf.txtWeight,
   },
-  btmBanner: {
+  btmBanTxt: {
     color: Colours.snow,
     textAlign: TextConf.txtAlign,
     fontSize: TextConf.txtFontSmall,
@@ -41,10 +49,13 @@ const styles = StyleSheet.create({
   btns: {
     backgroundColor: Colours.royal,
     borderRadius: 10,
+    borderColor: Colours.cornflower,
+    borderWidth: 5,
     justifyContent: "center",
     alignItems: "center",
     padding: 15,
     width: "100%",
+    marginVertical: 10,
   },
   btnsTxt: {
     color: Colours.snow,

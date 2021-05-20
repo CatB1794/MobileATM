@@ -7,6 +7,8 @@ import * as Permissions from 'expo-permissions';
 import { useKeyboard } from '@react-native-community/hooks'*/
 import { Entypo } from '@expo/vector-icons';
 
+import ReceiptOption from "./ReceiptOption";
+
 import styles from "../components/styles";
 
 function CDScreen(props) {

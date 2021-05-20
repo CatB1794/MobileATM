@@ -5,6 +5,8 @@ import { StatusBar } from "expo-status-bar";
 import * as FileSystem from 'expo-file-system';
 import * as Permissions from 'expo-permissions';*/
 
+import ReceiptOption from "./ReceiptOption";
+
 import styles from "../components/styles";
 
 function BalanceInquiry(props) {
