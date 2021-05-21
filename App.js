@@ -11,5 +11,5 @@ import BalanceInquiry from "./app/screens/BalanceInquiry";
 import ReceiptOption from "./app/screens/ReceiptOption";
 
 export default function App() {
-  return <NFCScreen />;
+  return <CurrencyEx />;
 }
