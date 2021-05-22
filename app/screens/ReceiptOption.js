@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/core";
 import { Text, Image, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
@@ -7,6 +8,7 @@ import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 
 function ReceiptOption(props) {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -25,7 +27,7 @@ function ReceiptOption(props) {
       <View style={styles.btmBanner}>
         <ExitBtn
           style={styles.btmBanTxt}
-          onPress={props.onPress}
+          onPress={() => navigation.goBack()}
           title="Go Back"
         />
       </View>
