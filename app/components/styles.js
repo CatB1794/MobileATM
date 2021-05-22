@@ -78,6 +78,14 @@ const styles = StyleSheet.create({
     textAlign: TextConf.txtAlign,
     fontSize: TextConf.txtFont,
   },
+  txtInput: {
+    borderBottomColor: Colours.steel,
+    borderTopColor: Colours.steel,
+    borderRightColor: Colours.steel,
+    borderLeftColor: Colours.steel,
+    borderWidth: 2.5,
+    width: 200,
+  },
 });
 
 export default styles;

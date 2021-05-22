@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/core";
 import { Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
@@ -7,6 +8,7 @@ import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 
 function MainMenu(props) {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -16,29 +18,29 @@ function MainMenu(props) {
       <View style={styles.container}>
         <AppButton
           style={styles.textMain}
-          onPress={props.onPress}
+          onPress={() => navigation.push("CWS")}
           title="Cash Withdrawal"
         />
         <AppButton
           style={styles.textMain}
-          onPress={props.onPress}
+          onPress={() => navigation.push("CDS")}
           title="Cash Deposit"
         />
         <AppButton
           style={styles.textMain}
-          onPress={props.onPress}
+          onPress={() => navigation.push("ChqDep")}
           title="Cheque Deposit"
         />
         <AppButton
           style={styles.textMain}
-          onPress={props.onPress}
+          onPress={() => navigation.push("Balance")}
           title="Balance Inquiry"
         />
       </View>
       <View style={styles.btmBanner}>
         <ExitBtn
           style={styles.btmBanTxt}
-          onPress={props.onPress}
+          onPress={() => props.navigation.popToTop()}
           title="Exit"
         />
       </View>

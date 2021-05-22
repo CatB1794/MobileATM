@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/core";
 import { Text, Image, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import styles from "../components/styles";
 
 function NFCScreen(props) {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -14,7 +16,7 @@ function NFCScreen(props) {
         </Text>
       </View>
       <View style={styles.container}>
-        <Text style={styles.textMain} onPress={props.onPress}>
+        <Text style={styles.textMain} onPress={() => navigation.push("Finger")}>
           Tap your NFC card here
         </Text>
         <Image

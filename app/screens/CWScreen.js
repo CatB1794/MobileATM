@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/core";
 import { Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 /*import * as MediaLibrary from 'expo-media-library';
@@ -11,6 +12,7 @@ import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 
 function CWScreen(props) {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -20,34 +22,34 @@ function CWScreen(props) {
       <View style={styles.container}>
         <AppButton
           style={styles.textMain}
-          onPress={props.onPress}
+          onPress={() => navigation.push("Receipt")}
           title="£10"
         />
         <AppButton
           style={styles.textMain}
-          onPress={props.onPress}
+          onPress={() => navigation.push("Receipt")}
           title="£20"
         />
         <AppButton
           style={styles.textMain}
-          onPress={props.onPress}
+          onPress={() => navigation.push("Receipt")}
           title="£50"
         />
         <AppButton
           style={styles.textMain}
-          onPress={props.onPress}
+          onPress={() => navigation.push("Other")}
           title="Other Amount"
         />
         <AppButton
           style={styles.textMain}
-          onPress={props.onPress}
+          onPress={() => navigation.push("CurEx")}
           title="Currency Exchange"
         />
       </View>
       <View style={styles.btmBanner}>
         <ExitBtn
           style={styles.btmBanTxt}
-          onPress={props.onPress}
+          onPress={() => navigation.goBack()}
           title="Go Back"
         />
       </View>

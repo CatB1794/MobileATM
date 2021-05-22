@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/core";
 import { Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { Entypo } from "@expo/vector-icons";
@@ -8,6 +9,7 @@ import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 
 function CurrencyEx(props) {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -20,7 +22,7 @@ function CurrencyEx(props) {
       <View style={styles.btmBanner}>
         <ExitBtn
           style={styles.btmBanTxt}
-          onPress={props.onPress}
+          onPress={() => navigation.goBack()}
           title="Go Back"
         />
       </View>
