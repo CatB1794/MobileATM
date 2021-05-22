@@ -27,11 +27,7 @@ const Navigator = () => (
     <Stack.Screen name="CurEx" component={CurrencyEx} />
     <Stack.Screen name="CDS" component={CDScreen} />
     <Stack.Screen name="ChqDep" component={ChqDepScreen} />
-    <Stack.Screen
-      name="Balance"
-      component={BalanceInquiry}
-      initialParams={{ balance: 1905.32 }}
-    />
+    <Stack.Screen name="Balance" component={BalanceInquiry} />
     <Stack.Screen name="Receipt" component={ReceiptOption} />
   </Stack.Navigator>
 );

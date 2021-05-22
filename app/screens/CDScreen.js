@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/core";
 import { Text, View, TextInput } from "react-native";
 import { StatusBar } from "expo-status-bar";
-/*import * as MediaLibrary from 'expo-media-library';
-import * as FileSystem from 'expo-file-system';
-import * as Permissions from 'expo-permissions';*/
 import { Entypo } from "@expo/vector-icons";
 
 import styles from "../components/styles";
@@ -13,7 +10,7 @@ import ExitBtn from "../components/ExitBtn";
 
 function CDScreen(props) {
   const navigation = useNavigation();
-  const [depAm, setDepAm] = useState("");
+  const [depAm, setDepAm] = useState(0);
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -24,9 +21,14 @@ function CDScreen(props) {
         <Entypo name="keyboard" size={50} color="black" />
         <TextInput
           keyboardType="numeric"
-          onChangeText={(text) => setDepAm(text)}
+          onChangeText={(depAm) => setDepAm(depAm)}
           style={styles.txtInput}
         ></TextInput>
+        <AppButton
+          style={styles.textMain}
+          onPress={() => navigation.push("Receipt")}
+          title="Accept"
+        />
       </View>
       <View style={styles.btmBanner}>
         <ExitBtn
@@ -38,19 +40,5 @@ function CDScreen(props) {
     </View>
   );
 }
-
-/*saveFile = async () => {
-  const { status } = await Permissions.askAsync(Permissions.MEDIA_LIBRARY);
-  if (status === "granted") {
-      let fileUri = FileSystem.documentDirectory + "Receipt.pdf";
-      await FileSystem.writeAsStringAsync(fileUri, "Hello World", { encoding: FileSystem.EncodingType.UTF8 });
-      const asset = await MediaLibrary.createAssetAsync(fileUri)
-      await MediaLibrary.createAlbumAsync("Download", asset, false)
-  }
-}*/
-
-/*
-      <Button title="Cash Withdrawal" onPress={() => Alert.alert("Receipt", "£50", [{text: "Ok"}])}/>
-*/
 
 export default CDScreen;

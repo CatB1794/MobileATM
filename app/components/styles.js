@@ -85,6 +85,9 @@ const styles = StyleSheet.create({
     borderLeftColor: Colours.steel,
     borderWidth: 2.5,
     width: 200,
+    color: Colours.cornflower,
+    textAlign: TextConf.txtAlign,
+    fontSize: TextConf.txtFontBig,
   },
 });
 

@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/core";
 import { Text, View, TextInput } from "react-native";
 import { StatusBar } from "expo-status-bar";
-/*import * as MediaLibrary from 'expo-media-library';
-import * as FileSystem from 'expo-file-system';
-import * as Permissions from 'expo-permissions';*/
 import { Entypo } from "@expo/vector-icons";
 
 import styles from "../components/styles";
@@ -27,6 +24,11 @@ function ChqDepScreen(props) {
           onChangeText={(text) => setChqAm(text)}
           style={styles.txtInput}
         ></TextInput>
+        <AppButton
+          style={styles.textMain}
+          onPress={() => navigation.push("Receipt")}
+          title="Accept"
+        />
       </View>
       <View style={styles.btmBanner}>
         <ExitBtn
@@ -38,15 +40,5 @@ function ChqDepScreen(props) {
     </View>
   );
 }
-
-/*saveFile = async () => {
-  const { status } = await Permissions.askAsync(Permissions.MEDIA_LIBRARY);
-  if (status === "granted") {
-      let fileUri = FileSystem.documentDirectory + "Receipt.pdf";
-      await FileSystem.writeAsStringAsync(fileUri, "Hello World", { encoding: FileSystem.EncodingType.UTF8 });
-      const asset = await MediaLibrary.createAssetAsync(fileUri)
-      await MediaLibrary.createAlbumAsync("Download", asset, false)
-  }
-}*/
 
 export default ChqDepScreen;
