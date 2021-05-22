@@ -4,8 +4,7 @@ import { Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 /*import * as MediaLibrary from 'expo-media-library';
 import * as FileSystem from 'expo-file-system';
-import * as Permissions from 'expo-permissions';
-import { useKeyboard } from '@react-native-community/hooks'*/
+import * as Permissions from 'expo-permissions';*/
 
 import styles from "../components/styles";
 import AppButton from "../components/AppButton";
