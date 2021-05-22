@@ -57,8 +57,6 @@ function CWScreen(props) {
   );
 }
 
-//<AppButton title="Test" />
-
 /*saveFile = async () => {
   const { status } = await Permissions.askAsync(Permissions.MEDIA_LIBRARY);
   if (status === "granted") {
