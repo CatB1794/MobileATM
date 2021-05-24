@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/core";
-import { Text, View, TextInput } from "react-native";
+import { Text, View, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { Entypo } from "@expo/vector-icons";
 
 import styles from "../components/styles";
 import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
+import Keyboard from "../components/Keyboard";
 
 function ChqDepScreen(props) {
   const navigation = useNavigation();
@@ -18,12 +18,11 @@ function ChqDepScreen(props) {
         <Text style={styles.topBanTxt}>Enter an amount to deposit</Text>
       </View>
       <View style={styles.container}>
-        <Entypo name="keyboard" size={50} color="black" />
-        <TextInput
-          keyboardType="numeric"
-          onChangeText={(text) => setChqAm(text)}
-          style={styles.txtInput}
-        ></TextInput>
+        <Image
+          resizeMode="contain"
+          source={require("../assets/chq-deposit-icon.png")}
+        />
+        <Keyboard />
         <AppButton
           style={styles.textMain}
           onPress={() => navigation.push("Receipt")}

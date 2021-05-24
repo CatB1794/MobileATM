@@ -8,6 +8,8 @@ import ExitBtn from "../components/ExitBtn";
 
 function FingerprintScreen(props) {
   const navigation = useNavigation();
+  const src = "../assets/fingerprint.png";
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -18,10 +20,7 @@ function FingerprintScreen(props) {
         <Text style={styles.textMain} onPress={() => navigation.push("Main")}>
           Scan here
         </Text>
-        <Image
-          resizeMode="contain"
-          source={require("../assets/fingerprint.png")}
-        />
+        <Image resizeMode="contain" source={require(src)} />
       </View>
       <View style={styles.btmBanner}>
         <ExitBtn

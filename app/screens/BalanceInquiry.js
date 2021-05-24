@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/core";
-import { StyleSheet, Text, Image, View, Button, Alert } from "react-native";
+import { Text, Image, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import styles from "../components/styles";
@@ -14,9 +14,13 @@ function BalanceInquiry(props) {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.topBanner}>
-        <Text style={styles.topBanTxt}>Balance Amount</Text>
+        <Text style={styles.topBanTxt}>Account Balance</Text>
       </View>
       <View style={styles.container}>
+        <Image
+          resizeMode="contain"
+          source={require("../assets/icon-account-balance.png")}
+        />
         <BankBalance />
         <AppButton
           style={styles.textMain}
