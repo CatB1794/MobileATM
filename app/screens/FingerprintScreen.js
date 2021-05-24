@@ -8,7 +8,7 @@ import ExitBtn from "../components/ExitBtn";
 
 function FingerprintScreen(props) {
   const navigation = useNavigation();
-  const src = "../assets/fingerprint.png";
+  const src = "../assets/fingerscan.png";
 
   return (
     <View style={styles.container}>
