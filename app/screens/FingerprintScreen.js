@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/core";
-import { Text, Image, View } from "react-native";
+import { Text, Image, View, TouchableOpacity } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import styles from "../components/styles";
@@ -16,12 +16,14 @@ function FingerprintScreen(props) {
       <View style={styles.topBanner}>
         <Text style={styles.topBanTxt}>Please scan your fingerprint</Text>
       </View>
-      <View style={styles.container}>
-        <Text style={styles.textMain} onPress={() => navigation.push("Main")}>
+      <TouchableOpacity style={styles.container} onPress={() => navigation.push("Main")}>
+      <View>
+        <Text style={styles.textMain}>
           Scan here
         </Text>
-        <Image resizeMode="contain" source={require(src)} />
+        <Image resizeMode="contain" source={require("../assets/scan.gif")} />
       </View>
+      </TouchableOpacity>
       <View style={styles.btmBanner}>
         <ExitBtn
           style={styles.btmBanTxt}
