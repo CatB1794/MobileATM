@@ -4,11 +4,13 @@ import { Text, View, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import styles from "../components/styles";
-import SelectOpt from "../components/SelectOpt";
+import CurrencyInput from "../components/CurrencyInput";
+import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 
-function CurrencyEx(props) {
+function CurrencyEx() {
   const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -20,8 +22,12 @@ function CurrencyEx(props) {
           resizeMode="contain"
           source={require("../assets/currency-exchange.png")}
         />
-        <SelectOpt />
-        <SelectOpt />
+        <CurrencyInput />
+        <AppButton
+          style={styles.textMain}
+          onPress={() => navigation.push("Receipt")}
+          title="Accept"
+        />
       </View>
       <View style={styles.btmBanner}>
         <ExitBtn

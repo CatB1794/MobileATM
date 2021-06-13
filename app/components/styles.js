@@ -89,6 +89,11 @@ const styles = StyleSheet.create({
     textAlign: TextConf.txtAlign,
     fontSize: TextConf.txtFontBig,
   },
+  separator: {
+    flex: 1,
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: Colours.steel,
+  },
 });
 
 export default styles;

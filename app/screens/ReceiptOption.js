@@ -24,8 +24,14 @@ function ReceiptOption(props) {
           onPress={() =>
             Alert.alert(
               "Dummy Receipt",
-              "Transaction information would be stored here",
-              [{ text: "Ok", onPress: () => navigation.navigate("Main") }]
+              "Transaction information would be emailed to customer",
+              [
+                {
+                  text: "Main Menu",
+                  onPress: () => navigation.navigate("Main"),
+                },
+                { text: "Exit", onPress: () => navigation.popToTop() },
+              ]
             )
           }
           title="Yes"
