@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/core";
-import { Text, Image, View } from "react-native";
+import { Text, Image, View, Alert } from "react-native";
 import { StatusBar } from "expo-status-bar";
 /*import * as MediaLibrary from 'expo-media-library';
 import * as FileSystem from 'expo-file-system';
@@ -8,7 +8,6 @@ import * as Permissions from 'expo-permissions';*/
 
 import styles from "../components/styles";
 import AppButton from "../components/AppButton";
-import ExitBtn from "../components/ExitBtn";
 
 function ReceiptOption(props) {
   const navigation = useNavigation();
@@ -22,7 +21,13 @@ function ReceiptOption(props) {
         <Image resizeMode="contain" source={require("../assets/receipt.png")} />
         <AppButton
           style={styles.textMain}
-          onPress={props.onPress}
+          onPress={() =>
+            Alert.alert(
+              "Dummy Receipt",
+              "Transaction information would be stored here",
+              [{ text: "Ok", onPress: () => navigation.navigate("Main") }]
+            )
+          }
           title="Yes"
         />
         <AppButton
@@ -41,7 +46,7 @@ function ReceiptOption(props) {
 /*saveFile = async () => {
   const { status } = await Permissions.askAsync(Permissions.MEDIA_LIBRARY);
   if (status === "granted") {
-      let fileUri = FileSystem.documentDirectory + "Receipt.pdf";
+      let fileUri = FileSystem.documentDirectory + "Receipt.txt";
       await FileSystem.writeAsStringAsync(fileUri, "Hello World", { encoding: FileSystem.EncodingType.UTF8 });
       const asset = await MediaLibrary.createAssetAsync(fileUri)
       await MediaLibrary.createAlbumAsync("Download", asset, false)

@@ -8,7 +8,6 @@ import ExitBtn from "../components/ExitBtn";
 
 function FingerprintScreen(props) {
   const navigation = useNavigation();
-  const src = "../assets/fingerscan.png";
 
   return (
     <View style={styles.container}>
@@ -16,13 +15,13 @@ function FingerprintScreen(props) {
       <View style={styles.topBanner}>
         <Text style={styles.topBanTxt}>Please scan your fingerprint</Text>
       </View>
-      <TouchableOpacity style={styles.container} onPress={() => navigation.push("Main")}>
-      <View>
-        <Text style={styles.textMain}>
-          Scan here
-        </Text>
-        <Image resizeMode="contain" source={require("../assets/scan.gif")} />
-      </View>
+      <TouchableOpacity
+        style={styles.container}
+        onPress={() => navigation.push("Main")}
+      >
+        <View>
+          <Image resizeMode="contain" source={require("../assets/scan.gif")} />
+        </View>
       </TouchableOpacity>
       <View style={styles.btmBanner}>
         <ExitBtn
