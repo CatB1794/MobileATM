@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { TextInput, StyleSheet, View } from "react-native";
-import { Entypo } from "@expo/vector-icons";
 
 import styles from "../components/styles";
 
@@ -21,7 +20,6 @@ class Keyboard extends Component {
   render() {
     return (
       <View style={keyStyles.keyContainer}>
-        <Entypo name="keyboard" size={35} color="black" />
         <TextInput
           keyboardType="numeric"
           onChangeText={this.handleAmount.bind(this)}

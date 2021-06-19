@@ -4,7 +4,7 @@ import { Text, View, Image } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import styles from "../components/styles";
-import CurrencyInput from "../components/CurrencyInput";
+//import CurrencyInput from "../components/CurrencyInput";
 import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 
@@ -22,7 +22,7 @@ function CurrencyEx() {
           resizeMode="contain"
           source={require("../assets/currency-exchange.png")}
         />
-        <CurrencyInput />
+        <Text style={styles.txtMainSmall}>Accurate as of August 6th, 2021</Text>
         <AppButton
           style={styles.textMain}
           onPress={() => navigation.push("Receipt")}

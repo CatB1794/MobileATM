@@ -9,6 +9,7 @@ import OtherAmount from "../screens/OtherAmount";
 import CurrencyEx from "../screens/CurrencyEx";
 import CDScreen from "../screens/CDScreen";
 import ChqDepScreen from "../screens/ChqDepScreen";
+import AppCamera from "../components/AppCamera";
 import BalanceInquiry from "../screens/BalanceInquiry";
 import ReceiptOption from "../screens/ReceiptOption";
 
@@ -27,6 +28,7 @@ const Navigator = () => (
     <Stack.Screen name="CurEx" component={CurrencyEx} />
     <Stack.Screen name="CDS" component={CDScreen} />
     <Stack.Screen name="ChqDep" component={ChqDepScreen} />
+    <Stack.Screen name="Cam" component={AppCamera} />
     <Stack.Screen name="Balance" component={BalanceInquiry} />
     <Stack.Screen name="Receipt" component={ReceiptOption} />
   </Stack.Navigator>

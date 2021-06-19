@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigation } from "@react-navigation/core";
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, TouchableOpacity } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
 import styles from "../components/styles";
@@ -8,9 +8,8 @@ import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 import Keyboard from "../components/Keyboard";
 
-function ChqDepScreen(props) {
+function ChqDepScreen() {
   const navigation = useNavigation();
-  const [chqAm, setChqAm] = useState("");
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -18,10 +17,15 @@ function ChqDepScreen(props) {
         <Text style={styles.topBanTxt}>Enter an amount to deposit</Text>
       </View>
       <View style={styles.container}>
-        <Image
-          resizeMode="contain"
-          source={require("../assets/chq-deposit-icon.png")}
-        />
+        <Text style={styles.txtMainSmall}>
+          Tap the image below to scan your cheque
+        </Text>
+        <TouchableOpacity onPress={() => navigation.push("Cam")}>
+          <Image
+            resizeMode="contain"
+            source={require("../assets/chq-deposit-icon.png")}
+          />
+        </TouchableOpacity>
         <Keyboard />
         <AppButton
           style={styles.textMain}

@@ -34,6 +34,12 @@ const styles = StyleSheet.create({
     fontSize: TextConf.txtFontBig,
     paddingVertical: 15,
   },
+  txtMainSmall: {
+    color: Colours.royal,
+    textAlign: TextConf.txtAlign,
+    fontSize: TextConf.txtFontSmall,
+    paddingVertical: 15,
+  },
   topBanTxt: {
     color: Colours.snow,
     textAlign: TextConf.txtAlign,
