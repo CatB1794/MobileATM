@@ -8,7 +8,7 @@ import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 import BankBalance from "../components/BankBalance";
 
-function BalanceInquiry(props) {
+function BalanceInquiry() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>

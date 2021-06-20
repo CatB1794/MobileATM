@@ -9,7 +9,7 @@ import ExitBtn from "../components/ExitBtn";
 import Keyboard from "../components/Keyboard";
 import BankBalance from "../components/BankBalance";
 
-function OtherAmount(props) {
+function OtherAmount() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>

@@ -8,7 +8,7 @@ import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 import Keyboard from "../components/Keyboard";
 
-function CDScreen(props) {
+function CDScreen() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>

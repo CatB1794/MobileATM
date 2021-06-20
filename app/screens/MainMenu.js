@@ -7,7 +7,7 @@ import styles from "../components/styles";
 import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 
-function MainMenu(props) {
+function MainMenu() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -40,7 +40,7 @@ function MainMenu(props) {
       <View style={styles.btmBanner}>
         <ExitBtn
           style={styles.btmBanTxt}
-          onPress={() => props.navigation.popToTop()}
+          onPress={() => navigation.popToTop()}
           title="Exit"
         />
       </View>

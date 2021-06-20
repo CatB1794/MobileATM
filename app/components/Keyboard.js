@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { TextInput, StyleSheet, View } from "react-native";
 
-import styles from "../components/styles";
+import styles from "./styles";
 
 class Keyboard extends Component {
   constructor() {

@@ -7,7 +7,7 @@ import styles from "../components/styles";
 import AppButton from "../components/AppButton";
 import ExitBtn from "../components/ExitBtn";
 
-function CWScreen(props) {
+function CWScreen() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>

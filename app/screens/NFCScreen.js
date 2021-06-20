@@ -5,7 +5,7 @@ import { StatusBar } from "expo-status-bar";
 
 import styles from "../components/styles";
 
-function NFCScreen(props) {
+function NFCScreen() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>

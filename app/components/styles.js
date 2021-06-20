@@ -85,20 +85,35 @@ const styles = StyleSheet.create({
     fontSize: TextConf.txtFont,
   },
   txtInput: {
-    borderBottomColor: Colours.steel,
-    borderTopColor: Colours.steel,
-    borderRightColor: Colours.steel,
-    borderLeftColor: Colours.steel,
+    borderColor: Colours.steel,
     borderWidth: 2.5,
     width: 200,
     color: Colours.cornflower,
     textAlign: TextConf.txtAlign,
     fontSize: TextConf.txtFontBig,
   },
-  separator: {
-    flex: 1,
-    height: StyleSheet.hairlineWidth,
-    backgroundColor: Colours.steel,
+  currencyContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    alignContent: "center",
+    marginHorizontal: 170,
+    padding: 5,
+  },
+  btnCurrency: {
+    borderColor: Colours.steel,
+    borderWidth: 2.5,
+    width: 90,
+  },
+  txtCurrency: {
+    borderColor: Colours.steel,
+    borderWidth: 2.5,
+    borderRadius: 4,
+    width: 180,
+    height: 47,
+    color: Colours.cornflower,
+    textAlign: TextConf.txtAlign,
+    fontSize: TextConf.txtFontBig,
   },
 });
 

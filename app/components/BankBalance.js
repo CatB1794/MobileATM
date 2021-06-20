@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "react-native";
 
-import styles from "../components/styles";
+import styles from "./styles";
 
 var initBalance = 1903.54;
 var amount = 0;

@@ -6,7 +6,7 @@ import { StatusBar } from "expo-status-bar";
 import styles from "../components/styles";
 import ExitBtn from "../components/ExitBtn";
 
-function FingerprintScreen(props) {
+function FingerprintScreen() {
   const navigation = useNavigation();
 
   return (
@@ -26,7 +26,7 @@ function FingerprintScreen(props) {
       <View style={styles.btmBanner}>
         <ExitBtn
           style={styles.btmBanTxt}
-          onPress={() => props.navigation.popToTop()}
+          onPress={() => navigation.popToTop()}
           title="Exit"
         />
       </View>

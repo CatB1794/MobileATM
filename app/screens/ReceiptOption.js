@@ -9,7 +9,7 @@ import * as Permissions from 'expo-permissions';*/
 import styles from "../components/styles";
 import AppButton from "../components/AppButton";
 
-function ReceiptOption(props) {
+function ReceiptOption() {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
