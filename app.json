@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "VirtualATM",
-    "slug": "VirtualATM",
+    "name": "MobileATM",
+    "slug": "mobileatm",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/icon.png",
+    "icon": "./app/assets/ATMIcon.png",
     "splash": {
       "image": "./app/assets/splash.png",
       "resizeMode": "contain",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
-    }
+    },
+    "description": "Basic UI implementation of what a mobile ATM could look like",
+    "githubUrl": "https://github.com/CatB1794/MobileATM"
   }
 }

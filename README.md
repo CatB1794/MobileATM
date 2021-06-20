@@ -1,9 +1,11 @@
-# VirtualATM
+# MobileATM
+
 Automatic-Teller Mobile
 
 Basic implementation of a virtual ATM.<br />
 
 Features:
+
 - NFC card screen.
 - Fingerprint security screen.
 - Main menu screen with selection of standard ATM transactions.
