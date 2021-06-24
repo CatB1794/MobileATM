@@ -6,7 +6,7 @@
     "orientation": "portrait",
     "icon": "./app/assets/ATMIcon.png",
     "splash": {
-      "image": "./app/assets/splash.png",
+      "image": "./app/assets/atm-splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,7 +21,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "foregroundImage": "./app/assets/adaptive-atm-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },

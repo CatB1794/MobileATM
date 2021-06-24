@@ -10,7 +10,7 @@ const CurrencyInput = () => {
   const [open, setOpen] = useState(false);
   const [quoteOpen, setQuoteOpen] = useState(false);
   const [baseAmnt, setBaseAmnt] = useState("");
-  const [baseCurrency, setBaseCurrency] = useState("GBP");
+  const [baseCurrency, setBaseCurrency] = useState("EUR");
   const [quoteAmnt, setQuoteAmnt] = useState("");
   const [quoteCurrency, setQuoteCurrency] = useState("USD");
   const [loading, setLoading] = useState(false);
@@ -52,6 +52,24 @@ const CurrencyInput = () => {
           />
         </View>
       </View>
+      <View
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center",
+        }}
+      >
+        {loading ? (
+          <ActivityIndicator color="#000000" size="large" />
+        ) : (
+          <Button
+            onPress={() =>
+              convertCurrency(baseAmnt, baseCurrency, quoteCurrency)
+            }
+            title="Convert"
+          />
+        )}
+      </View>
       <View style={styles.currencyContainer}>
         <DropDownPicker
           style={styles.btnCurrency}
@@ -72,24 +90,6 @@ const CurrencyInput = () => {
             value={quoteAmnt}
           />
         </View>
-      </View>
-      <View
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          alignContent: "center",
-        }}
-      >
-        {loading ? (
-          <ActivityIndicator color="#000000" size="large" />
-        ) : (
-          <Button
-            onPress={() =>
-              convertCurrency(baseAmnt, baseCurrency, quoteCurrency)
-            }
-            title="Convert"
-          />
-        )}
       </View>
     </View>
   );

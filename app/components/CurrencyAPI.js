@@ -1,13 +1,13 @@
 const currencyConverterEndPoint = "https://api.frankfurter.app";
 
 export const fetchCurrencyLatest = () => {
-  return fetch(`${currencyConverterEndPoint}/latest`)
+  return fetch(`${currencyConverterEndPoint}/latest?from=CHF`)
     .then((response) => response.json())
     .then((data) => Object.keys(data.rates));
 };
 
-export const convertCurrencyAPI = (amount, baseCurrency, quoteCurrency) => {
+export const convertCurrencyAPI = (amount, sourceCurrency, targetCurrency) => {
   return fetch(
-    `${currencyConverterEndPoint}/latest?amount=${amount}&from=${baseCurrency}&to=${quoteCurrency}`
+    `${currencyConverterEndPoint}/latest?amount=${amount}&from=${sourceCurrency}&to=${targetCurrency}`
   ).then((response) => response.json());
 };
