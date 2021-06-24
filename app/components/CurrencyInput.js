@@ -32,6 +32,7 @@ const CurrencyInput = () => {
     <View>
       <View style={styles.currencyContainer}>
         <DropDownPicker
+          zIndex={10}
           style={styles.btnCurrency}
           onChangeText={(value) => setBaseCurrency(value)}
           open={open}
@@ -72,6 +73,7 @@ const CurrencyInput = () => {
       </View>
       <View style={styles.currencyContainer}>
         <DropDownPicker
+          zIndex={5}
           style={styles.btnCurrency}
           onChangeText={(value) => setQuoteCurrency(value)}
           open={quoteOpen}
