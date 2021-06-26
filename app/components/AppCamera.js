@@ -1,22 +1,22 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/core";
-import { Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { Camera } from "expo-camera";
 import { Entypo } from "@expo/vector-icons";
 
 function AppCamera() {
   const [hasPermission, setHasPermission] = useState(null);
-  const [type, setType] = useState(Camera.Constants.Type.back);
+  const type = Camera.Constants.Type.back;
   const navigation = useNavigation();
 
-  /*const cam = useRef(Camera);
+  /*const [image, setImage] = useState(null);
 
-  const takePic = async () => {
-    if (cam.current) {
-      const options = { quality: 1, base64: true, skipProcessing: false };
-      await cam.current.takePictureAsync(options);
+    const takePicture = async () => {
+    if (camera) {
+      const data = await camera.takePictureAsync(null);
+      setImage(data.uri);
     }
-  };*/
+  }*/
 
   useEffect(() => {
     (async () => {
@@ -33,13 +33,12 @@ function AppCamera() {
   }
   return (
     <View style={{ flex: 1 }}>
-      <Camera style={{ flex: 1 }} type={type}>
+      <Camera style={{ flex: 1, aspectRatio: 1 }} type={type} ratio={`1:1`}>
         <View
           style={{
             flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            height: 1400,
+            marginHorizontal: 155,
+            marginTop: 675,
           }}
         >
           <TouchableOpacity onPress={() => navigation.goBack()}>
