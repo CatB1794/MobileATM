@@ -2,9 +2,6 @@ import React from "react";
 import { useNavigation } from "@react-navigation/core";
 import { Text, Image, View, Alert } from "react-native";
 import { StatusBar } from "expo-status-bar";
-/*import * as MediaLibrary from 'expo-media-library';
-import * as FileSystem from 'expo-file-system';
-import * as Permissions from 'expo-permissions';*/
 
 import styles from "../components/styles";
 import AppButton from "../components/AppButton";
@@ -49,7 +46,13 @@ function ReceiptOption() {
   );
 }
 
-/*saveFile = async () => {
+export default ReceiptOption;
+
+/*import * as MediaLibrary from 'expo-media-library';
+import * as FileSystem from 'expo-file-system';
+import * as Permissions from 'expo-permissions';
+
+saveFile = async () => {
   const { status } = await Permissions.askAsync(Permissions.MEDIA_LIBRARY);
   if (status === "granted") {
       let fileUri = FileSystem.documentDirectory + "Receipt.txt";
@@ -58,5 +61,3 @@ function ReceiptOption() {
       await MediaLibrary.createAlbumAsync("Download", asset, false)
   }
 }*/
-
-export default ReceiptOption;

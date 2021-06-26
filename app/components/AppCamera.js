@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/core";
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import { Camera } from "expo-camera";
 import { Entypo } from "@expo/vector-icons";
 
@@ -8,15 +8,6 @@ function AppCamera() {
   const [hasPermission, setHasPermission] = useState(null);
   const type = Camera.Constants.Type.back;
   const navigation = useNavigation();
-
-  /*const [image, setImage] = useState(null);
-
-    const takePicture = async () => {
-    if (camera) {
-      const data = await camera.takePictureAsync(null);
-      setImage(data.uri);
-    }
-  }*/
 
   useEffect(() => {
     (async () => {
