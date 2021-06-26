@@ -53,8 +53,4 @@ function CWScreen() {
   );
 }
 
-/*
-      <Button title="Cash Withdrawal" onPress={() => Alert.alert("Receipt", "£50", [{text: "Ok"}])}/>
-*/
-
 export default CWScreen;
