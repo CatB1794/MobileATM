@@ -28,8 +28,8 @@ function AppCamera() {
         <View
           style={{
             flexDirection: "row",
-            marginHorizontal: 155,
-            marginTop: 675,
+            marginHorizontal: "20%",
+            marginTop: "85%",
           }}
         >
           <TouchableOpacity onPress={() => navigation.goBack()}>
