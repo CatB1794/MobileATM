@@ -23,13 +23,12 @@ function AppCamera() {
     return <Text>No access to camera</Text>;
   }
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, alignItems: "center" }}>
       <Camera style={{ flex: 1, aspectRatio: 1 }} type={type} ratio={`1:1`}>
         <View
           style={{
-            flexDirection: "row",
-            marginHorizontal: "20%",
-            marginTop: "85%",
+            top: "85%",
+            alignItems: "center",
           }}
         >
           <TouchableOpacity onPress={() => navigation.goBack()}>
