@@ -34,7 +34,7 @@ function MainMenu() {
         <AppButton
           style={styles.textMain}
           onPress={() => navigation.push("Balance")}
-          title="Balance Inquiry"
+          title="Account Balance"
         />
       </View>
       <View style={styles.btmBanner}>

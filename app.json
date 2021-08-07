@@ -4,6 +4,7 @@
     "slug": "mobileatm",
     "version": "1.0.0",
     "orientation": "portrait",
+    "privacy": "public",
     "icon": "./app/assets/ATMIcon.png",
     "splash": {
       "image": "./app/assets/atm-splash.png",
