@@ -41,3 +41,5 @@ function CurrencyEx() {
 }
 
 export default CurrencyEx;
+
+// image attribution https://www.pinclipart.com/pindetail/iTibbhT_currency-vector-exchange-rate-card-exchange-icon-clipart/

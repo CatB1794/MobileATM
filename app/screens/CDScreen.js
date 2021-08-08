@@ -40,3 +40,5 @@ function CDScreen() {
 }
 
 export default CDScreen;
+
+// image attribution https://www.iconfinder.com/icons/676394/coins_money_payment_cash_deposit_finance_send_icon

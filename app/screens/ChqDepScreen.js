@@ -45,3 +45,5 @@ function ChqDepScreen() {
 }
 
 export default ChqDepScreen;
+
+// image attribution https://www.pngkit.com/view/u2r5q8w7q8r5i1w7_mobile-banking-and-deposit-mobile-deposit-icon-png/

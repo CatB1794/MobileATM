@@ -42,3 +42,5 @@ function OtherAmount() {
 }
 
 export default OtherAmount;
+
+// image attribution https://www.iconfinder.com/icons/676392/coins_income_money_cash_finance_receive_withdraw_icon

@@ -48,16 +48,4 @@ function ReceiptOption() {
 
 export default ReceiptOption;
 
-/*import * as MediaLibrary from 'expo-media-library';
-import * as FileSystem from 'expo-file-system';
-import * as Permissions from 'expo-permissions';
-
-saveFile = async () => {
-  const { status } = await Permissions.askAsync(Permissions.MEDIA_LIBRARY);
-  if (status === "granted") {
-      let fileUri = FileSystem.documentDirectory + "Receipt.txt";
-      await FileSystem.writeAsStringAsync(fileUri, "Hello World", { encoding: FileSystem.EncodingType.UTF8 });
-      const asset = await MediaLibrary.createAssetAsync(fileUri)
-      await MediaLibrary.createAlbumAsync("Download", asset, false)
-  }
-}*/
+// image attribution https://icon-icons.com/icon/receipt-shopping/49849

@@ -19,7 +19,7 @@ function AccountBalance() {
       <View style={styles.container}>
         <Image
           resizeMode="contain"
-          source={require("../assets/icon-account-balance.png")}
+          source={require("../assets/AccBalance.png")}
         />
         <BankBalance />
         <AppButton
@@ -40,3 +40,5 @@ function AccountBalance() {
 }
 
 export default AccountBalance;
+
+// image attribution <a href="https://www.vecteezy.com/free-vector/balance-icon">Balance Icon Vectors by Vecteezy</a>

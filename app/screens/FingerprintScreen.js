@@ -35,3 +35,5 @@ function FingerprintScreen() {
 }
 
 export default FingerprintScreen;
+
+// gif image attribution https://dribbble.com/shots/3560077-30-Days-of-Circles-Day-19
