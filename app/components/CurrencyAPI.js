@@ -11,3 +11,5 @@ export const convertCurrencyAPI = (amount, sourceCurrency, targetCurrency) => {
     `${currencyConverterEndPoint}/latest?amount=${amount}&from=${sourceCurrency}&to=${targetCurrency}`
   ).then((response) => response.json());
 };
+
+// Adapted from https://github.com/manojsinghnegiwd/react-native-currency-converter

@@ -98,3 +98,5 @@ const CurrencyInput = () => {
 };
 
 export default CurrencyInput;
+
+// Adapted from https://github.com/manojsinghnegiwd/react-native-currency-converter
