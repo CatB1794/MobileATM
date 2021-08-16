@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "MobileATM",
+    "owner": "catb17",
     "slug": "mobileatm",
     "version": "1.0.0",
     "orientation": "portrait",
